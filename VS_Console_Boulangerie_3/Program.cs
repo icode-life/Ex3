@@ -56,6 +56,7 @@ public class Program
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
                        // stock.AddBaguette(requestedQty);
+                       // need to reach out to bakery to handle stock
                     }
                     else
                     {
@@ -70,6 +71,7 @@ public class Program
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
                         //stock.AddBread(requestedQty);
+                        // need to reach out to bakery to handle stock, should avoid creating a second object stock here -> source of errors, non logical
                     }
                     else
                     {
