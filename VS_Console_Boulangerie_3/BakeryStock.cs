@@ -8,6 +8,7 @@ public class BakeryStock
 	public void AddBaguette(int productQty)
 	{
         _baguetteCount += productQty;
+		Console.WriteLine(_baguetteCount);
     }
 
     public void RemoveBaguette(int productQty)

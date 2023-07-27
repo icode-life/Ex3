@@ -16,8 +16,7 @@ public class Program
         //démarrage de la boucle
         do
         {
-            Console.WriteLine("Veuillez tapez le numéro de votre choix:\n1) Vente: baguette\n2) Vente: pain\n3) Production de baguettes\n " +
-                "4) Produire pains\n5) Consulter le produit des ventes\n6) exit");
+            Console.WriteLine("Veuillez tapez le numéro de votre choix:\n1) Vente: baguette\n2) Vente: pain\n3) Production de baguettes\n4) Produire pains\n5) Consulter le produit des ventes\n6) exit");
             userMenuPick = Console.ReadLine();
 
             //
@@ -42,7 +41,7 @@ public class Program
                     Console.WriteLine("How many breads would you like?");
                     usrInput = Console.ReadLine().ToLower().Trim();
                     requestedQty = int.Parse(usrInput);
-                    if (requestedQty > 0 && requestedQty > 1000)
+                    if (requestedQty > 0 && requestedQty < 1000)
                     {
                         bakery.SellBread(requestedQty);
                     }
@@ -56,7 +55,7 @@ public class Program
                     Console.WriteLine("How many Baguettes would you like to bake and add to stock?");
                     usrInput = Console.ReadLine().ToLower().Trim();
                     requestedQty = int.Parse(usrInput);
-                    if (requestedQty > 0 && requestedQty > 1000)
+                    if (requestedQty > 0 && requestedQty < 1000)
                     {
                         stock.AddBaguette(requestedQty);
                     }
@@ -70,7 +69,7 @@ public class Program
                     Console.WriteLine("How many breads would you like to bake and add to stock?");
                     usrInput = Console.ReadLine().ToLower().Trim();
                     requestedQty = int.Parse(usrInput);
-                    if (requestedQty > 0 && requestedQty > 1000)
+                    if (requestedQty > 0 && requestedQty < 1000)
                     {
                         stock.AddBread(requestedQty);
                     }
