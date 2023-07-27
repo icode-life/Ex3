@@ -1,11 +1,13 @@
-﻿using System;
-namespace VS_Console_Boulangerie_3
+﻿namespace VS_Console_Boulangerie_Niv3;
+
+public class BakeryStock
 {
-	public class BakeryStock
+	private int _baguetteCount;
+	private int _breadCount;
+
+	public BakeryStock()
 	{
-		public BakeryStock()
-		{
-		}
+
 	}
 }
 
