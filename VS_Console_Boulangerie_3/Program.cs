@@ -27,13 +27,14 @@ public class Program
                     Console.WriteLine("How many Baguettes would you like?");
                     usrInput = Console.ReadLine().ToLower().Trim();
                     requestedQty = int.Parse(usrInput);
-                    if (requestedQty > 0 && requestedQty > 1000)
+                    Console.WriteLine(requestedQty);
+                    if (requestedQty > 0 && requestedQty < 1000)
                     {
                         bakery.SellBaguette(requestedQty);
                     }
                     else
                     {
-                        Console.WriteLine("Veuillez sélectioner une quantité comprise entre 1 et 999 inclus");
+                        Console.WriteLine("Veuillez recommencer et sélectionner une quantité comprise entre 1 et 999 inclus");
                     }
                     break;
 
@@ -47,7 +48,7 @@ public class Program
                     }
                     else
                     {
-                        Console.WriteLine("Veuillez sélectioner une quantité comprise entre 1 et 999 inclus");
+                        Console.WriteLine("Veuillez recommencer et sélectioner une quantité comprise entre 1 et 999 inclus");
                     }
                     break;
 
@@ -61,7 +62,7 @@ public class Program
                     }
                     else
                     {
-                        Console.WriteLine("Veuillez sélectioner une quantité comprise entre 1 et 999 inclus");
+                        Console.WriteLine("Veuillez recommencer et sélectioner une quantité comprise entre 1 et 999 inclus");
                     }
                     break;
 
@@ -75,7 +76,7 @@ public class Program
                     }
                     else
                     {
-                        Console.WriteLine("Veuillez sélectioner une quantité comprise entre 1 et 999 inclus");
+                        Console.WriteLine("Veuillez recommencer et sélectioner une quantité comprise entre 1 et 999 inclus");
                     }
                     break;
 
