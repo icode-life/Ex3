@@ -5,6 +5,16 @@ public class BakeryStock
 	private int _baguetteCount = 50;
 	private int _breadCount = 50;
 
+	public int GetBaguettesCount()
+	{
+		return _baguetteCount;
+	}
+
+	public int GetBreadsCount()
+	{
+		return _breadCount;
+	}
+
 	public void AddBaguette(int productQty)
 	{
         _baguetteCount += productQty;

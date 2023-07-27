@@ -29,7 +29,14 @@ public class Program
                     Console.WriteLine(requestedQty);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        bakery.SellBaguette(requestedQty);
+                        if (requestedQty >= stock.GetBaguettesCount())
+                        {
+                            bakery.SellBaguette(requestedQty);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Désolé, nous ne pouvons honorer la commande");
+                        }
                     }
                     else
                     {
@@ -43,7 +50,12 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        bakery.SellBread(requestedQty);
+                        if (requestedQty>= stock.GetBreadsCount())
+                        {
+                            bakery.SellBread(requestedQty);
+                        } else {
+                            Console.WriteLine("Désolé, nous ne pouvons honorer la commande");
+                        }
                     }
                     else
                     {
