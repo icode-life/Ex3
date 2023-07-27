@@ -8,16 +8,31 @@ public class Bakery
 
     public void SellBaguette(int qty)
     {
-        Console.WriteLine("Vente d'une baguette enregistrée\n\n");
-        _cashRegisterAmount += qty*1.1F;
-        stock.RemoveBaguette(qty);
+        if (qty <= stock.GetBaguettesCount())
+        {
+            Console.WriteLine("Vente de baguette enregistrée\n\n");
+            _cashRegisterAmount += qty * 1.1F;
+            stock.RemoveBaguette(qty);
+        }
+        else
+        {
+            Console.WriteLine($"Désolé, il ne nous reste que {stock.GetBaguettesCount()} baguette(s)");
+        }
     }
 
     public void SellBread(int qty)
     {
-        Console.WriteLine("Vente d'un pain enregistrée\n\n");
-        _cashRegisterAmount += qty*2.6F;
-        stock.RemoveBread(qty);
+        if (qty <= stock.GetBreadsCount())
+        {
+            Console.WriteLine("Vente de pain enregistrée\n\n");
+            _cashRegisterAmount += qty * 2.6F;
+            stock.RemoveBread(qty);
+        }
+        else
+        {
+            Console.WriteLine($"Désolé, il ne nous reste que {stock.GetBreadsCount()} pain(s)");
+
+        }
     }
 
     public float GetCashRegisterAmount()

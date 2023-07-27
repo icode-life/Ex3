@@ -9,7 +9,6 @@ public class Program
          int requestedQty = 0;
          string? usrInput = "";
         Bakery bakery = new Bakery();
-        BakeryStock stock = new();
 
     Console.WriteLine("Bonjour,\nBienvenue dans l'application Bakery mgmt!");
 
@@ -26,17 +25,9 @@ public class Program
                     Console.WriteLine("How many Baguettes would you like?");
                     usrInput = Console.ReadLine().ToLower().Trim();
                     requestedQty = int.Parse(usrInput);
-                    Console.WriteLine(requestedQty);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        if (requestedQty >= stock.GetBaguettesCount())
-                        {
                             bakery.SellBaguette(requestedQty);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Désolé, nous ne pouvons honorer la commande");
-                        }
                     }
                     else
                     {
@@ -50,16 +41,11 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        if (requestedQty>= stock.GetBreadsCount())
-                        {
-                            bakery.SellBread(requestedQty);
-                        } else {
-                            Console.WriteLine("Désolé, nous ne pouvons honorer la commande");
-                        }
+                        bakery.SellBread(requestedQty);
                     }
                     else
                     {
-                        Console.WriteLine("Veuillez recommencer et sélectioner une quantité comprise entre 1 et 999 inclus");
+                        Console.WriteLine("Veuillez recommencer et sélectionner une quantité comprise entre 1 et 999 inclus");
                     }
                     break;
 
@@ -69,7 +55,7 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        stock.AddBaguette(requestedQty);
+                       // stock.AddBaguette(requestedQty);
                     }
                     else
                     {
@@ -83,7 +69,7 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        stock.AddBread(requestedQty);
+                        //stock.AddBread(requestedQty);
                     }
                     else
                     {
