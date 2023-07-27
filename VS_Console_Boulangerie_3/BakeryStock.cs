@@ -2,12 +2,26 @@
 
 public class BakeryStock
 {
-	private int _baguetteCount;
-	private int _breadCount;
+	private int _baguetteCount = 50;
+	private int _breadCount = 50;
 
-	public BakeryStock()
+	public void AddBaguette(int productQty)
 	{
+        _baguetteCount += productQty;
+    }
 
+    public void RemoveBaguette(int productQty)
+	{
+		_baguetteCount -= productQty;
+	}
+
+	public void AddBread(int productQty)
+	{
+        _baguetteCount += productQty;
+    }
+
+    public void RemoveBread(int productQty)
+	{
+		_breadCount -= productQty;
 	}
 }
-
