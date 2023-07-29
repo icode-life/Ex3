@@ -22,4 +22,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VS_Console_Boulangerie_3\VS_Console_Boulangerie_3.csproj" />
+  </ItemGroup>
 </Project>

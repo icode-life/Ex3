@@ -39,5 +39,15 @@ public class Bakery
     {
         return _cashRegisterAmount;
     }
+
+    public int GetBaguetteStock()
+    {
+        return stock.GetBaguettesCount();
+    }
+
+    public int GetBreadStock()
+    {
+        return stock.GetBreadsCount();
+    }
 }
 
