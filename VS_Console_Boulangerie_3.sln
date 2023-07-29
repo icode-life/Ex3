@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS_Console_Boulangerie_3", "VS_Console_Boulangerie_3\VS_Console_Boulangerie_3.csproj", "{19738862-5325-4107-A3CC-D3EA198BD185}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VS_Console_Boulangerie_3_Tests", "VS_Console_Boulangerie_3_Tests\VS_Console_Boulangerie_3_Tests.csproj", "{5BEFDB12-D92C-49FB-9A65-017C3DEBDBDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{19738862-5325-4107-A3CC-D3EA198BD185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19738862-5325-4107-A3CC-D3EA198BD185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19738862-5325-4107-A3CC-D3EA198BD185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BEFDB12-D92C-49FB-9A65-017C3DEBDBDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BEFDB12-D92C-49FB-9A65-017C3DEBDBDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BEFDB12-D92C-49FB-9A65-017C3DEBDBDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BEFDB12-D92C-49FB-9A65-017C3DEBDBDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

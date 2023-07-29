@@ -7,4 +7,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="VS_Console_Boulangerie_3_Tests\UnitTest1.cs" />
+    <Compile Remove="VS_Console_Boulangerie_3_Tests\Usings.cs" />
+    <Compile Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
+    <Compile Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.AssemblyInfo.cs" />
+    <Compile Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.GlobalUsings.g.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\VS_Console_Boulangerie_3_Tests.csproj.nuget.g.props" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\VS_Console_Boulangerie_3_Tests.csproj.nuget.dgspec.json" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\project.nuget.cache" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\VS_Console_Boulangerie_3_Tests.csproj.nuget.g.targets" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\project.assets.json" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.AssemblyInfoInputs.cache" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.assets.cache" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.csproj.AssemblyReference.cache" />
+    <None Remove="VS_Console_Boulangerie_3_Tests\obj\Debug\net7.0\VS_Console_Boulangerie_3_Tests.GeneratedMSBuildEditorConfig.editorconfig" />
+  </ItemGroup>
 </Project>
