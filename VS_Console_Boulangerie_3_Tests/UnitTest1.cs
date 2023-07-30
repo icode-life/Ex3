@@ -66,7 +66,7 @@ public class UnitTest1
     }
 
     [Fact]
-    public void TestSellBaguetteFullStock() //vente de baguette impossible stock insuffisant
+    public void TestSellBreadFullStock() //vente de baguette impossible stock insuffisant
     {
         //arrange
         Bakery bakery = new Bakery();
@@ -74,8 +74,8 @@ public class UnitTest1
 
 
         //act
-        bakery.SellBaguette(50);
-        int actual = bakery.GetBaguetteStock();
+        bakery.SellBread(50);
+        int actual = bakery.GetBreadStock();
 
         //assert
         Assert.Equal(expected, actual);
