@@ -64,4 +64,20 @@ public class UnitTest1
         //assert
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void TestSellBaguetteFullStock() //vente de baguette impossible stock insuffisant
+    {
+        //arrange
+        Bakery bakery = new Bakery();
+        int expected = 0; // stock plein mais insuffisant
+
+
+        //act
+        bakery.SellBaguette(50);
+        int actual = bakery.GetBaguetteStock();
+
+        //assert
+        Assert.Equal(expected, actual);
+    }
 }
