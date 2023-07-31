@@ -2,6 +2,54 @@
 
 public class UnitTest1
 {
+
+    [Fact]
+    public void TestBaseStock() //vente de baguette impossible stock insuffisant
+    {
+        //arrange
+        BakeryStock stock = new();
+        int expected = 50; // stock plein mais insuffisant
+
+
+        //act
+        int actual = stock.GetBaguettesCount();
+
+        //assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void TestAddBaguettes() //vente de baguette impossible stock insuffisant
+    {
+        //arrange
+        BakeryStock stock = new();
+        int expected = 60; // on va ajouter 10 baguettes au stock
+
+
+        //act
+        stock.AddBaguette(10);
+        int actual = stock.GetBaguettesCount();
+
+        //assert
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
+    public void TestRemoveBaguette() //vente de baguette impossible stock insuffisant
+    {
+        //arrange
+        BakeryStock stock = new();
+        int expected = 0; // stock plein mais insuffisant
+
+
+        //act
+        stock.RemoveBaguette(50);
+        int actual = stock.GetBaguettesCount();
+
+        //assert
+        Assert.Equal(expected, actual);
+    }
+
     [Fact]
         public void TestGetCashRegisterAmount()
     {
