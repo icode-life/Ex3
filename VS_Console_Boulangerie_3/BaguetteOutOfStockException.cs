@@ -1,10 +1,10 @@
-﻿namespace VS_Console_Boulangerie_3
+﻿namespace VS_Console_Boulangerie_Niv3;
+
+public class BaguetteOutOfStockException: Exception
 {
-	public class BaguetteOutOfStockException
+	public BaguetteOutOfStockException(string message): base(message)
 	{
-		public BaguetteOutOfStockException()
-		{
-		}
+
 	}
 }
 

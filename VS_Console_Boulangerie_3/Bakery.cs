@@ -12,7 +12,15 @@ public class Bakery
         {
             Console.WriteLine("Vente de baguette enregistrée\n\n");
             _cashRegisterAmount += qty * 1.1F;
-            stock.RemoveBaguette(qty);
+            try
+            {
+                stock.RemoveBaguette(qty);
+            }
+            catch (BaguetteOutOfStockException e)
+            {
+                Console.WriteLine($"Attention le stock est épuisé: {e.Message}");
+                stock.AddBaguette(50);
+            }
         }
         else
         {

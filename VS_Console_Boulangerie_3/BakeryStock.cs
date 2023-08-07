@@ -23,10 +23,12 @@ public class BakeryStock
 
     public void RemoveBaguette(int productQty)
 	{
+		if (productQty == _baguetteCount)
 		_baguetteCount -= productQty;
-	}
+        throw new BaguetteOutOfStockException("BaguetteOutOfStockException: Insufficient stock");
+    }
 
-	public void AddBread(int productQty)
+    public void AddBread(int productQty)
 	{
         _baguetteCount += productQty;
     }

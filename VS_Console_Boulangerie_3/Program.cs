@@ -27,7 +27,7 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                            bakery.SellBaguette(requestedQty);
+                        bakery.SellBaguette(requestedQty);        
                     }
                     else
                     {
