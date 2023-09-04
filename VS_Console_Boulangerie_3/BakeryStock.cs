@@ -1,4 +1,6 @@
-﻿namespace VS_Console_Boulangerie_Niv3;
+﻿using System;
+
+namespace VS_Console_Boulangerie_Niv3;
 
 public class BakeryStock
 {
@@ -23,20 +25,30 @@ public class BakeryStock
 
 	public void RemoveBaguette(int productQty)
 	{
-		if (productQty == _baguetteCount)
+		if (productQty >= _baguetteCount)
 		{
-			_baguetteCount -= productQty;
-			throw new BaguetteOutOfStockException("BaguetteOutOfStockException: Insufficient stock");
+			if(productQty == _baguetteCount)
+			{
+				_baguetteCount -= productQty;
+				throw new BaguetteOutOfStockException("stock = 0");
+			}
+            else
+			{
+                throw new BaguetteOutOfStockException("");
+			}
 		}
 		else
 		{
             _baguetteCount -= productQty;
         }
     }
+
+
     public void AddBread(int productQty)
 	{
         _baguetteCount += productQty;
     }
+
 
     public void RemoveBread(int productQty)
 	{

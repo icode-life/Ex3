@@ -10,16 +10,26 @@ public class Bakery
     {
         if (qty <= stock.GetBaguettesCount())
         {
-            Console.WriteLine("Vente de baguette enregistrée\n\n");
-            _cashRegisterAmount += qty * 1.1F;
             try
             {
                 stock.RemoveBaguette(qty);
+                Console.WriteLine("Vente de baguette enregistrée\n\n");
+                _cashRegisterAmount += qty * 1.1F;
             }
             catch (BaguetteOutOfStockException e)
             {
-                Console.WriteLine($"Attention le stock est épuisé: {e.Message}");
-                stock.AddBaguette(50);
+                if (e.Message.StartsWith("il ne reste que"))
+                {
+                    //int baguettesRestantes = 
+                    throw new Exception($"nombre de baguette(s) restante(s): {stock.GetBaguettesCount()}");
+                }
+                else
+                {
+                    if(e.Message.StartsWith("stock"))
+                    {
+                        stock.AddBaguette(50);
+                    }
+                }
             }
         }
         else

@@ -27,7 +27,27 @@ public class Program
                     requestedQty = int.Parse(usrInput);
                     if (requestedQty > 0 && requestedQty < 1000)
                     {
-                        bakery.SellBaguette(requestedQty);        
+                        try
+                        {
+                            bakery.SellBaguette(requestedQty);
+                        }
+                        catch(BaguetteOutOfStockException e)
+                        {
+                            if (e.Message.StartsWith("il ne reste que"))
+                            {
+                                int dispo = int.Parse(e.Message.Substring(35));
+                                Console.WriteLine($"Désolé, il ne nous reste que {dispo} baguette(s), combien en voulez-vous?");
+                                int newQty = int.Parse(Console.ReadLine() ?? "0");
+                                if (newQty > 1 && newQty <= dispo)
+                                {
+                                    bakery.SellBaguette(newQty);
+                                }
+                                else
+                                {
+                                    Environment.Exit(1);
+                                }
+                            }
+                        }
                     }
                     else
                     {
